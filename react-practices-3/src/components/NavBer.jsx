@@ -5,18 +5,22 @@ const NavBer = ({ routes }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center py-5">
       <div className="text-2xl font-extrabold">Hello</div>
       <div>
         <div
           className="md:hidden cursor-pointer select-none text-2xl"
           onClick={() => setOpen(!open)}
         >
-          {open === true ? <AiOutlineMenuFold /> : <AiOutlineClose />}
+          {open === true ? <AiOutlineClose /> : <AiOutlineMenuFold />}
         </div>
-        <ul className="hidden md:flex flex-col md:flex-row gap-4">
+        <ul
+          className={`${
+            open ? 'md:flex' : 'hidden'
+          }  flex-col md:flex-row gap-4 absolute md:static right-0 shadow-lg md:shadow-none`}
+        >
           {routes.map((dta) => (
-            <li key={dta.id}>
+            <li key={dta.id} className="hover:bg-red-200 px-4">
               <a href={dta.path}>{dta.name}</a>
             </li>
           ))}
