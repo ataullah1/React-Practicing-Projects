@@ -16,9 +16,16 @@ const NavBer = ({ routes }) => {
         </div>
         <ul
           className={`${
-            open ? 'md:flex' : 'hidden'
-          }  flex-col md:flex-row gap-4 absolute md:static right-0 shadow-lg md:shadow-none`}
+            open ? 'flex md:hidden' : 'hidden'
+          }  flex-col  absolute right-0 shadow-lg `}
         >
+          {routes.map((dta) => (
+            <li key={dta.id} className="hover:bg-red-200 px-4">
+              <a href={dta.path}>{dta.name}</a>
+            </li>
+          ))}
+        </ul>
+        <ul className=" gap-4 hidden md:flex">
           {routes.map((dta) => (
             <li key={dta.id} className="hover:bg-red-200 px-4">
               <a href={dta.path}>{dta.name}</a>
