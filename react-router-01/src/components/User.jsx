@@ -4,7 +4,7 @@ const User = ({ dta }) => {
   const { name, email, id, website } = dta;
   console.log(dta);
   return (
-    <div className="border-2 border-yellow-500 mb-5 rounded-lg p-4 space-y-2">
+    <div className="border-2 border-yellow-500 mb-5 rounded-xl p-4 space-y-2">
       <h1 className="text-2xl font-bold">
         {id}- {name}
       </h1>
