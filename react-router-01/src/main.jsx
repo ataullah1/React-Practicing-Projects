@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import App from './App.jsx';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
-import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
+import Contact from './components/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,12 +13,12 @@ const router = createBrowserRouter([
     element: <Home />,
     children: [
       {
-        path: '/header',
-        element: <Header />,
-      },
-      {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },

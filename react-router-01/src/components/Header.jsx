@@ -1,10 +1,18 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
   return (
     <div>
-      <ul>
-        <li>Heme</li>
-        <li>About</li>
-        <li>Blog</li>
+      <ul
+        style={{
+          display: 'flex',
+          gap: '20px',
+          justifyContent: 'center',
+        }}
+      >
+        <Link to="/">Heme</Link>
+        <Link to="about">About</Link>
+        <Link to="contact">Contact</Link>
       </ul>
     </div>
   );
