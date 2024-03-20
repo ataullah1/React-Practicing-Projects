@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div>
-      <ul
-        style={{
-          display: 'flex',
-          gap: '20px',
-          justifyContent: 'center',
-        }}
-      >
-        <Link to="/">Heme</Link>
-        <Link to="users">Users</Link>
-        <Link to="about">About</Link>
-        <Link to="contact">Contact</Link>
+      <ul className="flex gap-8 justify-center my-6">
+        <Link className="bg-fuchsia-300 px-5 py-1 rounded-md" to="/">
+          Heme
+        </Link>
+        <Link className="bg-fuchsia-300 px-5 py-1 rounded-md" to="users">
+          Users
+        </Link>
+        <Link className="bg-fuchsia-300 px-5 py-1 rounded-md" to="about">
+          About
+        </Link>
+        <Link className="bg-fuchsia-300 px-5 py-1 rounded-md" to="contact">
+          Contact
+        </Link>
       </ul>
     </div>
   );
