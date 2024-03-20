@@ -3,11 +3,10 @@ import Header from './Header';
 
 const Home = () => {
   return (
-    <div>
-      <h1>This is home section</h1>
+    <div style={{ textAlign: 'center' }}>
       <Header />
       <Outlet />
-      <h3>This is Footer section</h3>
+      <h3 style={{ textAlign: 'center' }}>This is Footer section</h3>
     </div>
   );
 };
