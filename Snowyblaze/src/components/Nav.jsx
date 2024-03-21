@@ -21,7 +21,9 @@ const Nav = () => {
     <div className="navbar bg-base-100 shadow-lg p-0 min-h-0">
       <div className="w-11/12 mx-auto">
         <div className="flex-1">
-          <a className="font-bold cursor-pointer text-2xl">React Routing</a>
+          <NavLink to={'/'} className="font-bold cursor-pointer text-2xl">
+            React Routing
+          </NavLink>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 flex gap-3 text-lg">
