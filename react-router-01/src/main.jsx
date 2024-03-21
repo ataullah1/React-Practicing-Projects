@@ -8,11 +8,13 @@ import Contact from './components/Contact.jsx';
 import Users from './components/Users.jsx';
 import App from './App.jsx';
 import UserDetails from './components/UserDetails.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/about',
