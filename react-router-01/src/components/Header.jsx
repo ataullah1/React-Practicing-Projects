@@ -1,30 +1,35 @@
-import { Link } from 'react-router-dom';
+import './components.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div>
-      <ul className="flex gap-8 justify-center my-6 font-bold">
-        <Link className="bg-fuchsia-500 text-white px-5 py-1 rounded-md" to="/">
+      <ul className="flex gap-8 justify-center my-6 font-bold navBer">
+        <NavLink
+          className="bg-fuchsia-500 text-white px-5 py-1 rounded-md"
+          to="/"
+        >
           Heme
-        </Link>
-        <Link
+        </NavLink>
+
+        <NavLink
           className="bg-fuchsia-500 text-white px-5 py-1 rounded-md"
           to="users"
         >
           Users
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="bg-fuchsia-500 text-white px-5 py-1 rounded-md"
           to="about"
         >
           About
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           className="bg-fuchsia-500 text-white px-5 py-1 rounded-md"
           to="contact"
         >
           Contact
-        </Link>
+        </NavLink>
       </ul>
     </div>
   );
