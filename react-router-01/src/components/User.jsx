@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const User = ({ dta }) => {
   const { name, email, id, website } = dta;
-  console.log(dta);
+  // console.log(dta);
+  const naviget = useNavigate();
+  const showDetails = () => {
+    naviget(`/user/${id}`);
+  };
   return (
     <div className="border-2 border-yellow-500 mb-5 rounded-xl p-4 space-y-2">
       <h1 className="text-2xl font-bold">
@@ -16,6 +20,13 @@ const User = ({ dta }) => {
       >
         Show Details
       </Link>
+      <button
+        className="bg-gray-500 px-5 py-2 rounded-lg font-bold text-white"
+        onClick={showDetails}
+      >
+        {' '}
+        Details
+      </button>
     </div>
   );
 };
