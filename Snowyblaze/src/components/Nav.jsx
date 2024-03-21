@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const [theme, setTheme] = useState('light');
@@ -24,15 +25,24 @@ const Nav = () => {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 flex gap-3 text-lg">
-            <li className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold">
+            <NavLink
+              to={'/'}
+              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+            >
               Home
-            </li>
-            <li className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold">
+            </NavLink>
+            <NavLink
+              to={'/blogs'}
+              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+            >
               Blog
-            </li>
-            <li className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold">
+            </NavLink>
+            <NavLink
+              to={'/bookmarsks'}
+              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+            >
               Bookmarks
-            </li>
+            </NavLink>
           </ul>
         </div>
         <label className="cursor-pointer grid place-items-center">

@@ -1,11 +1,9 @@
 import Nav from '../components/Nav';
-import Bookmarks from './Bookmarks';
-
 const Home = () => {
   return (
     <div>
       <Nav />
-      <Bookmarks />
+      <h1>Home Page</h1>
     </div>
   );
 };
