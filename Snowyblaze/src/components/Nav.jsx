@@ -18,30 +18,45 @@ const Nav = () => {
     document.querySelector('html').setAttribute('data-theme', saveTheme);
   }, [theme]);
   return (
-    <div className="navbar bg-base-100 shadow-lg p-0 min-h-0">
+    <div className="navbar bg-base-100 shadow-lg py-2 min-h-0">
       <div className="w-11/12 mx-auto">
         <div className="flex-1">
-          <NavLink to={'/'} className="font-bold cursor-pointer text-2xl">
-            React Routing
+          <NavLink
+            to={'/'}
+            className="font-bold cursor-pointer text-3xl text-secondary"
+          >
+            Snowy<span className="text-primary">Blaze</span>
           </NavLink>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 flex gap-3 text-lg">
             <NavLink
               to={'/'}
-              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-primary px-5 py-1 rounded-md cursor-pointer font-semibold'
+                  : 'px-5 py-1 rounded-md cursor-pointer font-semibold'
+              }
             >
               Home
             </NavLink>
             <NavLink
               to={'/blogs'}
-              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-primary px-5 py-1 rounded-md cursor-pointer font-semibold'
+                  : 'px-5 py-1 rounded-md cursor-pointer font-semibold'
+              }
             >
               Blog
             </NavLink>
             <NavLink
               to={'/bookmarsks'}
-              className="hover:bg-green-300 px-5 py-1 rounded-md cursor-pointer font-semibold"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-primary px-5 py-1 rounded-md cursor-pointer font-semibold'
+                  : 'px-5 py-1 rounded-md cursor-pointer font-semibold'
+              }
             >
               Bookmarks
             </NavLink>
