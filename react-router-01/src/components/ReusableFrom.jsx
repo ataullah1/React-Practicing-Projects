@@ -1,20 +1,10 @@
-import Form from './Form';
-import ReusableFrom from './ReusableFrom';
-
-const Contact = () => {
+const ReusableFrom = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Clicked', e);
-    console.log(e.target.nameText.value);
-    console.log(e.target.email.value);
-    console.log(e.target.number.value);
   };
   return (
     <div>
       <h1>This is Contact section</h1>
-      <ReusableFrom />
-      <h1>========================</h1>
-      <Form />
       <div className="border border-gray-400 rounded-xl w-3/6 mx-auto my-9">
         <form
           action=""
@@ -36,9 +26,9 @@ const Contact = () => {
             className="px-5 py-2 border-2 border-fuchsia-200 mb-3 outline-none w-full rounded-md"
           />
           <input
-            type="number"
-            name="number"
-            placeholder="Enter your number "
+            type="password"
+            name="password"
+            placeholder="Enter your password "
             className="px-5 py-2 border-2 border-fuchsia-200 mb-3 outline-none w-full rounded-md"
             id=""
           />
@@ -53,4 +43,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ReusableFrom;
