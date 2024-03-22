@@ -1,17 +1,10 @@
-import Form from './Form';
-
-const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Clicked', e);
-    console.log(e.target.nameText.value);
-    console.log(e.target.email.value);
-    console.log(e.target.number.value);
+const Form = () => {
+  const handleSubmit = () => {
+    console.log('Hello');
   };
   return (
     <div>
       <h1>This is Contact section</h1>
-      <Form />
       <div className="border border-gray-400 rounded-xl w-3/6 mx-auto my-9">
         <form
           action=""
@@ -50,4 +43,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Form;
