@@ -1,11 +1,19 @@
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Clicked', e);
+    console.log(e.target.nameText.value);
+    console.log(e.target.email.value);
+    console.log(e.target.number.value);
+  };
   return (
     <div>
       <h1>This is Contact section</h1>
-      <div className="border border-gray-400 rounded-xl w-3/6 mx-auto">
+      <div className="border border-gray-400 rounded-xl w-3/6 mx-auto my-9">
         <form
           action=""
           className="flex flex-col justify-center items-center p-10"
+          onSubmit={handleSubmit}
         >
           <input
             type="text"
