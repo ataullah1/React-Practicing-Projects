@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 const JobCategoryList = ({ jobList }) => {
-  console.log(jobList);
+  // console.log(jobList);
   const { logo, category_name, availability } = jobList;
   return (
     <div className="bg-gradient-to-r from-[#7E90FE0D] to-[#9873FF0D] rounded-lg p-5 md:p-10">

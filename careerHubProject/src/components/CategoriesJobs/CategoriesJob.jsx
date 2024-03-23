@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { CiLocationOn } from 'react-icons/ci';
 import { AiOutlineDollarCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 const CategoriesJob = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -26,7 +28,7 @@ const CategoriesJob = ({ job }) => {
           {job_type}
         </div>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 pb-6">
         <p className="flex items-center gap-1">
           <CiLocationOn />
           {location}
@@ -38,9 +40,12 @@ const CategoriesJob = ({ job }) => {
           </span>
         </p>
       </div>
-      <button className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded text-white text-xl font-extrabold active:scale-90 duration-200">
+      <Link
+        to={`/job/${id}`}
+        className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded text-white text-xl font-extrabold active:scale-90 duration-200"
+      >
         View Details
-      </button>
+      </Link>
     </div>
   );
 };
