@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-10 bg-base-200 text-base-content bg-[#1A1919] text-white">
         <aside>
           <svg
             width="50"
@@ -17,7 +17,7 @@ const Footer = () => {
           <p>
             ACME Industries Ltd.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech aa since 1992
           </p>
         </aside>
         <nav>
