@@ -3,7 +3,7 @@ import bannerImg from '../../assets/images/user.png';
 const Banner = () => {
   return (
     <div className="bg-[#F9F9FF]">
-      <div className="w-full px-2 sm:px-0 sm:w-11/12 mx-auto flex flex-col-reverse md:flex-row items-center justify-between lg:h-[calc(100vh-72px)] gap-10 md:gap-0 lg:gap-8">
+      <div className="w-full px-4 sm:px-0 sm:w-11/12 mx-auto flex flex-col-reverse md:flex-row items-center justify-between lg:h-[calc(100vh-72px)] gap-10 md:gap-0 lg:gap-8">
         <div className="md:w-1/2">
           <div className="text-zinc-900 text-4xl lg:text-[80px] font-extrabold leading-[50px] lg:leading-[100px]">
             One Step <br /> Closer To Your <br />

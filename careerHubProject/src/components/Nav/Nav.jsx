@@ -5,7 +5,7 @@ import '../../index.css';
 const Nav = () => {
   return (
     <div className="bg-[#F9F9FF]">
-      <div className="navbar bg-base-100 bg-[#F9F9FF] w-full px-2 sm:px-0 sm:w-11/12 mx-auto flex items-center justify-between">
+      <div className="navbar bg-[#F9F9FF] w-full px-2 sm:px-0 sm:w-11/12 mx-auto flex items-center justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
