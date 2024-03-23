@@ -5,8 +5,10 @@ import Footer from '../components/Footer/Footer';
 const Root = () => {
   return (
     <div>
-      <Nav />
-      <Outlet />
+      <div className="w-full px-2 sm:px-0 sm:w-11/12 mx-auto">
+        <Nav />
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
