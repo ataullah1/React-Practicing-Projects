@@ -3,7 +3,7 @@ import bannerImg from '../../assets/images/user.png';
 const Banner = () => {
   return (
     <div className="bg-[#F9F9FF]">
-      <div className="w-full px-4 sm:px-0 sm:w-11/12 mx-auto flex flex-col-reverse md:flex-row items-center justify-between lg:h-[calc(100vh-72px)] gap-10 md:gap-0 lg:gap-8">
+      <div className="w-full px-4 sm:px-0 sm:w-11/12 mx-auto flex flex-col-reverse md:flex-row items-center justify-between lg:min-h-[calc(100vh-72px)] gap-10 md:gap-0 lg:gap-8 py-8 sm:py-0">
         <div className="md:w-1/2">
           <div className="text-zinc-900 text-4xl lg:text-[80px] font-extrabold leading-[50px] lg:leading-[100px]">
             One Step <br /> Closer To Your <br />
@@ -18,7 +18,7 @@ const Banner = () => {
             Get Started
           </button>
         </div>
-        <div className="md:w-1/2 h-full flex items-end">
+        <div className="md:w-1/2 lg:min-h-[calc(100vh-72px)] flex items-end justify-end">
           <img className="w-full sm:w-8/12 ml-auto md:w-full" src={bannerImg} />
         </div>
       </div>
