@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-
+import { CiLocationOn } from 'react-icons/ci';
+import { AiOutlineDollarCircle } from 'react-icons/ai';
 const CategoriesJob = ({ job }) => {
   const {
     logo,
@@ -17,18 +18,27 @@ const CategoriesJob = ({ job }) => {
       <h2 className="text-zinc-700 text-2xl font-extrabold">{job_title}</h2>
       <p className="text-neutral-500 text-xl font-semibold">{company_name}</p>
       <div className="flex gap-5">
-        <button className="px-6 py-2 rounded border border-indigo-400 text-indigo-400 text-base font-extrabold">
+        <div className="px-6 py-2 rounded border border-indigo-400 text-indigo-400 text-base font-extrabold">
           {remote_or_onsite}
-        </button>
-        <button className="px-6 py-2 rounded border border-indigo-400 text-indigo-400 text-base font-extrabold">
+        </div>
+
+        <div className="px-6 py-2 rounded border border-indigo-400 text-indigo-400 text-base font-extrabold">
           {job_type}
-        </button>
+        </div>
       </div>
       <div className="flex gap-5">
-        <p>{location}</p>
-        <p>Salary : {salary}</p>
+        <p className="flex items-center gap-1">
+          <CiLocationOn />
+          {location}
+        </p>
+        <p className="flex items-center gap-1">
+          Salary:{' '}
+          <span className="flex items-center gap-1">
+            <AiOutlineDollarCircle /> {salary}
+          </span>
+        </p>
       </div>
-      <button className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded text-white text-xl font-extrabold ">
+      <button className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded text-white text-xl font-extrabold active:scale-90 duration-200">
         View Details
       </button>
     </div>
