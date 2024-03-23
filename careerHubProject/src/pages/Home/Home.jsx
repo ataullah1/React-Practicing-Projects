@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <JobList />
-      <FeaturedJobs />
-      <CategoriesJobs />
+      <div className="w-full px-4 sm:px-0 sm:w-11/12 mx-auto">
+        <JobList />
+        <FeaturedJobs />
+        <CategoriesJobs />
+      </div>
     </div>
   );
 };
