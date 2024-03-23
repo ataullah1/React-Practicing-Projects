@@ -1,4 +1,4 @@
-const JobCategoryList = () => {
+const JobList = () => {
   return (
     <div className="text-center">
       <h1 className="text-zinc-900 text-5xl font-extrabold pb-5 pt-36">
@@ -12,4 +12,4 @@ const JobCategoryList = () => {
   );
 };
 
-export default JobCategoryList;
+export default JobList;
