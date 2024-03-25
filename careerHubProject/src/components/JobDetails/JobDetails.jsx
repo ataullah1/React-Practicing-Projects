@@ -8,6 +8,11 @@ const JobDetails = () => {
   //   console.log(jobs);
   const job = jobs.find((dta) => dta.id === parseInt(id));
   //   console.log(job);
+
+const handleApply=()=>{
+    alert('sdfsdf')
+}
+
   return (
     <div>
       <div>
@@ -93,7 +98,7 @@ const JobDetails = () => {
                   : {job.contact_information.address}
                 </p>
               </div>
-              <button className="w-full py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold active:scale-90 duration-200">
+              <button onClick={()=>handleApply} className="w-full py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold active:scale-90 duration-200">
                 Apply Now
               </button>
             </div>

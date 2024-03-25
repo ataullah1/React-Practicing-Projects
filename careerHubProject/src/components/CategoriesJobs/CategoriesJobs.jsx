@@ -20,7 +20,7 @@ const CategoriesJobs = () => {
       <div className={jobLength === jobs.length && 'hidden'}>
         <button
           onClick={() => setJobLength(jobs.length)}
-          className="block mx-auto my-8 px-7 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold "
+          className="hover:scale-105 duration-200 block mx-auto my-8 px-7 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold "
         >
           See All Jobs
         </button>

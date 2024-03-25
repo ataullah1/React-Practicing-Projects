@@ -71,7 +71,7 @@ const Nav = () => {
         <div className="navbar-end">
           <Link
             to={'/'}
-            className="px-4 sm:px-7 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-base sm:text-xl font-extrabold "
+            className="active:scale-90 duration-200 px-4 sm:px-7 py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-base sm:text-xl font-extrabold "
           >
             Star Applying
           </Link>
