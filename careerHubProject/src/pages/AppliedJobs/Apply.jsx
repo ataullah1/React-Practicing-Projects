@@ -13,7 +13,7 @@ const Apply = ({ apply }) => {
     logo,
   } = apply;
   return (
-    <div className="flex justify-between items-center mb-6 w-full">
+    <div className="flex justify-between items-center mb-6 w-full rounded-lg border border-gray-200 p-7">
       <div className="flex gap-6 items-center">
         <div className="w-60 h-60 px-11 flex items-center justify-center bg-zinc-100 rounded-lg">
           <img className="w-full" src={logo} alt="" />

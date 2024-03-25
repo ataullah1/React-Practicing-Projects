@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import bgImgPosi1 from '../../assets/images/bg1.png';
 import bgImgPosi2 from '../../assets/images/bg2.png';
 import { ToastContainer, toast } from 'react-toastify';
@@ -118,10 +118,10 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-      <Link to={'/'} className="py-2 px-7 bg-green-500 rounded-xl">
+      {/* <Link to={'/'} className="py-2 px-7 bg-green-500 rounded-xl">
         {' '}
         Go to Home
-      </Link>
+      </Link> */}
 
       <ToastContainer />
     </div>

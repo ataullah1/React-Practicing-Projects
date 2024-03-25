@@ -9,7 +9,19 @@ import Apply from './Apply';
 const AppliedJobs = () => {
   const jobs = useLoaderData();
   // console.log(jobs);
+  const [filters, setFilters] = useState([]);
   const [apply, setApply] = useState([]);
+  const filterDta = (dta) => {
+    if (dta === 'all') {
+      setApply(filters);
+    } else if (dta === 'remote') {
+      const remote = filters.filter((dta) => dta.remote_or_onsite === 'Remote');
+      setApply(remote);
+    } else if (dta === 'onsite') {
+      const onsite = filters.filter((dta) => dta.remote_or_onsite === 'Onsite');
+      setApply(onsite);
+    }
+  };
 
   useEffect(() => {
     const storeDta = getStoreJobsDta();
@@ -17,6 +29,7 @@ const AppliedJobs = () => {
     if (storeDta.length > 0) {
       const applyDta = jobs.filter((dta) => storeDta.includes(dta.id));
       setApply(applyDta);
+      setFilters(applyDta);
     }
   }, []);
   return (
@@ -50,13 +63,13 @@ const AppliedJobs = () => {
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28"
             >
-              <li>
+              <li onClick={() => filterDta('all')}>
                 <a>All</a>
               </li>
-              <li>
+              <li onClick={() => filterDta('remote')}>
                 <a>Remote</a>
               </li>
-              <li>
+              <li onClick={() => filterDta('onsite')}>
                 <a>Onsite</a>
               </li>
             </ul>
