@@ -1,6 +1,9 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import bgImgPosi1 from '../../assets/images/bg1.png';
 import bgImgPosi2 from '../../assets/images/bg2.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobsDtaLocalStorage } from '../../utility/localStorage';
 const JobDetails = () => {
   const jobs = useLoaderData();
   const { id } = useParams();
@@ -8,10 +11,17 @@ const JobDetails = () => {
   //   console.log(jobs);
   const job = jobs.find((dta) => dta.id === parseInt(id));
   //   console.log(job);
-
-const handleApply=()=>{
-    alert('sdfsdf')
-}
+  let click = 0;
+  const handleApply = () => {
+    if (click < 2) {
+      click += 1;
+    }
+    saveJobsDtaLocalStorage(id);
+    // console.log(click);
+    if (click <= 1) {
+      toast.success('Your apply has been successful');
+    }
+  };
 
   return (
     <div>
@@ -21,13 +31,13 @@ const handleApply=()=>{
             Job Details
           </h1>
           <img
-            className="absolute left-0 bottom-0 w-[250px]"
+            className="absolute left-0 bottom-0 w-40 md:w-[250px]"
             src={bgImgPosi1}
             alt=""
           />
         </div>
         <img
-          className="absolute right-0 top-0 w-[250px]"
+          className="absolute right-0 top-0 w-40 md:w-[250px]"
           src={bgImgPosi2}
           alt=""
         />
@@ -98,7 +108,10 @@ const handleApply=()=>{
                   : {job.contact_information.address}
                 </p>
               </div>
-              <button onClick={()=>handleApply} className="w-full py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold active:scale-90 duration-200">
+              <button
+                onClick={handleApply}
+                className="w-full py-2 bg-gradient-to-r from-indigo-400 to-violet-500 rounded-lg text-white text-xl font-extrabold active:scale-90 duration-200"
+              >
                 Apply Now
               </button>
             </div>
@@ -109,6 +122,8 @@ const handleApply=()=>{
         {' '}
         Go to Home
       </Link>
+
+      <ToastContainer />
     </div>
   );
 };
