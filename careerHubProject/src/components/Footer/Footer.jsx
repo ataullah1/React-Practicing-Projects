@@ -41,6 +41,15 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
+      <p className="italic text-center text-white bg-[#1A1919] pt-9 pb-3">
+        Developed by{' '}
+        <a
+          className="text-pink-500 font-semibold "
+          href="https://www.linkedin.com/in/md-ataullah/"
+        >
+          Md Ataullah
+        </a>
+      </p>
     </div>
   );
 };
