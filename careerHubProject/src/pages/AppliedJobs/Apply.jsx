@@ -13,8 +13,8 @@ const Apply = ({ apply }) => {
     logo,
   } = apply;
   return (
-    <div className="flex justify-between items-center mb-6 w-full rounded-lg border border-gray-200 p-7">
-      <div className="flex gap-6 items-center">
+    <div className="flex flex-col lg:flex-row gap-9 items-center md:items-start lg:justify-between lg:items-center mb-6 w-full rounded-lg border border-gray-200 p-7">
+      <div className="flex flex-col md:flex-row text-center md:text-left mx-auto md:mx-0 gap-6 items-center">
         <div className="w-60 h-60 px-11 flex items-center justify-center bg-zinc-100 rounded-lg">
           <img className="w-full" src={logo} alt="" />
         </div>
@@ -23,7 +23,7 @@ const Apply = ({ apply }) => {
           <p className="text-neutral-500 text-xl font-semibold">
             {company_name}
           </p>
-          <div className="flex gap-5">
+          <div className="flex items-center justify-center md:justify-start gap-5">
             <div className="px-6 py-2 rounded border border-indigo-400 text-indigo-400 text-base font-extrabold">
               {remote_or_onsite}
             </div>

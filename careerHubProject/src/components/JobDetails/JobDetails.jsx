@@ -44,8 +44,8 @@ const JobDetails = () => {
           alt=""
         />
         <div>
-          <div className="pt-28 flex gap-6 w-11/12 mx-auto">
-            <div className="w-8/12">
+          <div className="pt-28 flex flex-col lg:flex-row gap-6 w-11/12 mx-auto">
+            <div className="w-full lg:w-8/12">
               <p className="text-zinc-900 text-base leading-loose">
                 <span className="font-extrabold">Job Description: </span>
                 {job.job_description}
@@ -69,7 +69,7 @@ const JobDetails = () => {
               </p>
             </div>
 
-            <div className="w-1/3 ">
+            <div className="w-full lg:w-1/3 ">
               <div className="bg-gradient-to-r from-[#7E90FE1A] to-[#9873FF1A] rounded-lg p-7 mb-6">
                 <div className="text-zinc-900 text-xl font-extrabold">
                   Job Details
