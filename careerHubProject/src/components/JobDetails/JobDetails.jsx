@@ -20,6 +20,8 @@ const JobDetails = () => {
     // console.log(click);
     if (click <= 1) {
       toast.success('Your apply has been successful');
+    } else {
+      toast.warning('Sorry allready applyed !');
     }
   };
 
