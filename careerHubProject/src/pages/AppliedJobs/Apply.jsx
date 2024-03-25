@@ -38,10 +38,8 @@ const Apply = ({ apply }) => {
               {location}
             </p>
             <p className="flex items-center gap-1">
-              Salary:{' '}
-              <span className="flex items-center gap-1">
-                <AiOutlineDollarCircle /> {salary}
-              </span>
+              <AiOutlineDollarCircle /> Salary:
+              <span className="flex items-center gap-1">{salary}</span>
             </p>
           </div>
         </div>
