@@ -31,7 +31,7 @@ const AppliedJobs = () => {
       setApply(applyDta);
       setFilters(applyDta);
     }
-  }, []);
+  }, [jobs]);
   return (
     <div>
       <div>
